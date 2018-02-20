@@ -1,6 +1,5 @@
 const MapWrapper = function(coords, container, zoom){
   this.googleMap = new google.maps.Map(container, {
-    // center: {lat: 40.712784, lng: -74.005941},
     center: coords,
     zoom: zoom
   })
@@ -12,11 +11,6 @@ MapWrapper.prototype.addInfoWindow = function (coords, contentString) {
     map: this.googleMap,
     content: contentString,
   })
-};
-
-MapWrapper.prototype.goToScunny = function () {
-  // this.googleMap.setCenter({lat: 53.581066, lng: -0.660172})
-  this.setCenter(new google.maps.LatLng(53.581066, -0.660172));
 };
 
 MapWrapper.prototype.addMarker = function (coords) {
@@ -38,9 +32,3 @@ MapWrapper.prototype.addClickEvent = function () {
     this.addMarker(coords);
   }.bind(this))
 };
-
-// {lat: 56.620201, lng: -3.943670}
-// 56.620201, -3.943670
-
-
-// setCenter{lat: 53.581066, lng: -0.660172}
