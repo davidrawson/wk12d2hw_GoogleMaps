@@ -15,7 +15,8 @@ MapWrapper.prototype.addInfoWindow = function (coords, contentString) {
 };
 
 MapWrapper.prototype.goToScunny = function () {
-  this.googleMap.setCenter({lat: 53.581066, lng: -0.660172})
+  // this.googleMap.setCenter({lat: 53.581066, lng: -0.660172})
+  this.setCenter(new google.maps.LatLng(53.581066, -0.660172));
 };
 
 MapWrapper.prototype.addMarker = function (coords) {
